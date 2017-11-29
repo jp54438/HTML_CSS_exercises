@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Henkilön tiedot - Lomake, harjoitus 4</title>
+		<meta name="description" content="Front End mestari kurssi, harjoitus 4" />
+		<meta name="author" content="Juha-Pekka Pälli" />
+	</head>
+		<body>
+		<h1>Täytä alla olevat kentät ja lähetä</h1>
+		<form action="http://koti.tamk.fi/~lnojuh/form_handler.php" method="post" enctype="multipart/form-data">
+			<p>
+			<fieldset>
+				<legend>Henkilötiedot</legend>
+				Etunimi:<input type="Text" name="fname" id="fname" size="20" /><br>
+				<br>
+				Sukunimi:<input type="Text" name="lname" id="lname" size="20" /><br>
+				<br>
+				Email:<input type="email" name="email" id="email" size="40" maxlength="40" /><br>
+				<br>
+				Salasana:<input type="password" name="pwd" id="pwd" size="20" maxlength="20" /><br>
+				<br>
+				Osoite:<input type="text" name="addr" id="addr" size="40" maxlength="60" /><br>
+				<br>
+				Puhelinnumero:<input type="tel" name="tel" id="tel" size="20" maxlength="20" /><br>
+				<br>
+				Sukupuoli:<br>
+				<label for="male">Mies</label>
+				<input type="radio" name="gender" id="male" value="male" /><br>
+				<label for="female">Nainen</label>
+				<input type="radio" name="gender" id="female" value="female" /><br>
+				<label for="other">Jätän kertomatta</label>
+				<input type="radio" name="gender" id="other" value="other" /><br>
+				</fieldset>
+				<br>
+				Kodin koko neliömetreissä:<input type="number" name="neliot" id="neliot" size="3" min="0" step="0.5"/> m2<br>
+				<br>
+				Ansiotuloluokka:<Select name="ansio" id="ansio">
+								<option value="alle5k">Alle 5 000 €/kk</option>
+								<option value="yli5alle10">5 000 - 10 000 €/kk</option>
+								<option value="yli10">Yli 10 000 €/kk</option>
+								<option value="na" selected="selected" disabled="disabled">Valitse</option>
+								</Select><br>
+				<br>
+				Automerkki:<Select name="automerkki" id="automerkki">
+								<option value="">Lada</option>
+								<option value="">Mosse</option>
+								<option value="">Warre</option>
+								<option value="na" selected="selected" disabled="disabled">Valitse</option>
+								</Select><br>
+				<br>
+				Värit joista pidän:<Select name="varit[]" multiple id="varit">
+								<option value="sininen">Sininen</option>
+								<option value="valkoinen">Valkoinen</option>
+								<option value="puinainen">Punainen</option>
+								<option value="keltainen">Keltainen</option>
+								<option value="musta">Musta</option>
+								<option value="vihrea">Vihreä</option>
+								<option value="oranssi">Oranssi</option>
+								<option value="pinkki">Pinkki</option>
+								<option value="turkoosi">Turkoosi</option>
+								<option value="violetti">Violetti</option>
+								<option value="ruskea">Ruskea</option>
+								<option value="harmaa">Harmaa</option>
+								</Select><br>
+				<br>
+				Liitä CV tiedosto (pdf) : <input type="file" name="fileupload" id="fileupload" accept=".pdf" />
+				<br>
+				<br>
+				<fieldset>
+					Lyhyt matkakeromus:<br>
+					Otsikko:<input type="Text" name="otsikko" id="otsikko" size="40" /><br><br>
+					Teksti:<textarea rows="8" cols="100" name="matkakertomus" id="matkakertomus"></textarea>
+					<br>
+					Maa, johon matkakertomus liittyy <input type="text" name="maa" list="maat">
+						<datalist id="maat">
+							<option value="Suomi">
+							<option value="Ruotsi">
+							<option value="Viro">
+							<option value="Norja">
+							<option value="Saksa">
+							<option value="Ranska">
+							<option value="Italia">
+							<option value="Portugali">
+							<option value="Sveitsi">
+							<option value="Itävalta">
+							<option value="Puola">
+						</datalist>
+					<br>
+					Vuosi, jolloin matka tapahtui: <input type="number" min="1900" max="2030" step="1" value="2017" />
+					<br>
+				</fieldset>
+				<br>
+				Maat, joissa olet käynyt:
+				<select name="maat_joissa_kaynyt[]" id="maat_joissa_kaynyt" multiple>
+					<optgroup label="Eurooppa">
+						<option value="Ruotsi">Ruotsi</option>
+						<option value="Viro">Viro</option>
+						<option value="Norja">Norja</option>
+						<option  value="Ranska">Ranska</option>
+						<option value="Tanska">Tanska</option>
+						<option value="Italia">Italia</option>					
+					</optgroup>
+					<optgroup label="Aasia">
+						<option value="Kiina">Kiina</option>
+						<option value="Japani">Japani</option>
+						<option value="Thaimaa">Thaimaa</option>
+						<option value="Vietnam">Vietnam</option>
+						<option value="Intia">Intia</option>
+						<option value="Afganistan">Afganistan</option>					
+					</optgroup>
+					<optgroup label="Afrikka">
+						<option value="Egypti">Egypti</option>
+						<option value="Kamerun">Kamerun</option>
+						<option value="Nigeria">Nigeria</option>
+						<option value="Sierra Leone">Sierra Leone</option>
+						<option value="Namibia">Namibia</option>
+						<option value="Etelä-Afrikka">Etelä-Afrikka</option>					
+					</optgroup>
+						<optgroup label="Pohjois-Amerikka">
+						<option value="Yhdysvallat">Yhdysvallat</option>
+						<option value="Kanada">Kanada</option>
+						<option value="Meksiko">Meksiko</option>
+					</optgroup>
+					<optgroup label="Etelä-Amerikka">
+						<option value="Brasilia">Brasilia</option>
+						<option value="Argentiina">Argentiina</option>
+						<option value="Chile">Chile</option>
+						<option value="Bolivia">Bolivia</option>
+						<option value="Kolumbia">Kolumbia</option>
+					</optgroup>
+					<optgroup label="Oseania">
+						<option value="Australia">Australia</option>
+						<option value="Uusi-Seelanti">Uusi-Seelanti</option>
+						<option value="Samoa">Samoa</option>
+						<option value="Nauru">Nauru</option>					
+					</optgroup>
+				</select> 
+				<br>
+				<br>
+				
+			<fieldset class="matkustustavat">
+				<legend>Matkustan mielelläni:</legend>
+				<label for="juna">Juna:</label>
+				<input type="checkbox" name="matkustustavat[]" id="juna" value="juna" /><br/>
+				<label for="laiva">Laiva:</label>
+				<input type="checkbox" name="matkustustavat[]" id="laiva" value="laiva" /><br/>
+				<label for="bussi">Bussi:</label>
+				<input type="checkbox" name="matkustustavat[]" id="bussi" value="bussi" /><br/>
+				<label for="lentokone">Lentokone:</label>
+				<input type="checkbox" name="matkustustavat[]" id="lentokone" value="lentokone" /><br/>
+			</fieldset>
+			
+			<fieldset class="allergiat">
+				<legend>Mahdolliset ruoka-aineallergiat:</legend>
+				<label for="maito">Maito:</label>
+				<input type="checkbox" name="allergiat[]" id="maito" value="maito" /><br/>
+				<label for="kala">Kala:</label>
+				<input type="checkbox" name="allergiat[]" id="kala" value="kala" /><br/>
+				<label for="banaani">Banaani:</label>
+				<input type="checkbox" name="allergiat[]" id="banaani" value="banaani" /><br/>
+				<label for="vehna">Vehnä:</label>
+				<input type="checkbox" name="allergiat[]" id="vehna" value="vehna" /><br/>
+
+				Muu allergia:<textarea rows="6" cols="30" name="muuallergia" id="muuallergia"></textarea>
+			</fieldset>
+			<br>
+			<br>
+			
+			Hotellin tähdet matkakohteessa vähintään (1 - 5):
+			<input name="tahdet" id="tahdet" type="range" min="1" max="5" step="1" value="3">
+			<br>
+			<br>
+			<input type="submit" value="Lähetä" />
+			
+		
+		</form>
+		
+	</body>
+</html>

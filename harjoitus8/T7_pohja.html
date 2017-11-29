@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Selector harjoitus, Juha-Pekka Pälli</title>
+	<style type="text/css">
+	
+	body {
+		margin: 0;
+	}
+	#container {
+		margin: 8px;
+		margin-left: 16px;
+		margin-right: 16px;
+		border: gray 1px solid;
+		background-color: #ededed;
+	}
+	.content_holder {
+		float: left;
+		width: 50%;
+		vertical-align: top;
+	}
+	.text_container {
+		padding: 8px;
+		margin: 0px 4px 0px 4px;
+		background-color: khaki;
+	}
+	.left {
+		margin-left: 8px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	.right {
+		margin-right: 8px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	.blocker_stretcher {
+		clear:both;
+	}
+	
+	
+	h1, h2{
+		margin-top:0px;
+		margin-bottom:0px;
+	}
+	h1+p::first-letter{
+		font-size:2em;
+	}
+	h1+p::first-line{
+		font-family: "Courier New", monospace;
+	}
+	
+	a[target=_blank] { 
+		color: red;
+	}
+	
+    a[target=_blank]:after{
+		content:" [" attr(href) "] ";
+		font-family:"Courier New", monospace;
+		font-color:red;
+	}
+
+	.content_holder h1{
+		font-family:Arial;
+		font-size:1em;
+	}
+	p~h1{
+		margin-top: 36px;
+		font-style:italic;
+		margin-bottom:-10px;
+		padding-bottom:0px;
+	}
+	h1~p{
+		margin:0px;
+		padding:0px;
+		}
+	.content_holder p:last-child:after{
+		content: url("http://koti.tamk.fi/~lnojuh/Kuvia/redsquare.png");
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+	
+		<div>
+			<h1>Content in two columns</h1>
+			<p>
+				Etiam mofo urna hizzle nisl. Get down get down quizzle arcu. Pizzle pulvinar, ipsizzle malesuada malesuada go to hizzle, nulla purus sizzle nizzle, shiz luctizzle metizzle nulla izzle fizzle. Fo shizzle mah nizzle fo rizzle, mah home g-dizzle ullamcorper, tortor yo mamma varius <a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_top">dizzle</a>, nibh nunc ma nizzle turpis, izzle luctus leo funky fresh fo shizzle mah nizzle fo rizzle, mah home g-dizzle crazy. <a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank">Maurizzle</a> pimpin', orci vel funky fresh consectetuer, sem augue luctus nisi, at bibendizzle enim tellivizzle izzle nisl. Nullam dang break yo neck, yall shiz orci eleifend ghetto.
+			</p>
+		</div>
+		
+		<div class="content_holder">	
+			<div class="text_container left">
+				<h1>Column 1</h1>
+				<p>
+					Etiam mofo urna hizzle nisl. Get down get down quizzle arcu. Pizzle pulvinar, ipsizzle malesuada malesuada go to hizzle, nulla purus sizzle nizzle, shiz luctizzle metizzle nulla izzle fizzle. Fo shizzle mah nizzle fo rizzle, mah home g-dizzle ullamcorper, tortor yo mamma varius dizzle, nibh nunc ma nizzle turpis, izzle luctus leo funky fresh fo shizzle mah nizzle fo rizzle, mah home g-dizzle crazy. Maurizzle pimpin', orci vel funky fresh consectetuer, sem augue luctus nisi, at bibendizzle enim tellivizzle izzle nisl. Nullam dang break yo neck, yall shiz orci eleifend ghetto.
+				</p>
+				<h1>Uusi otsikko ja tekstiä näyttämään, että h1 ja p lisääminen keskelle toimii</h1>
+				<p>uutta tekstiä le dolor shizzlin dizzle amizzle, consectetuer adipiscing elizzle. Gizzle sapizzle velizzle, hizzle boom shackalack, suscipizzle quis, gangster vel, arcu. Pellentesque bizzle tortor. Crazy erizzle.
+				</p>
+				
+				<p>
+					Da bomb mah nizzle dolor shizzlin dizzle amizzle, consectetuer adipiscing elizzle. Gizzle sapizzle velizzle, hizzle boom shackalack, suscipizzle quis, gangster vel, arcu. Pellentesque bizzle tortor. Crazy erizzle. Crazy dapibizzle. Dang tellizzle urna, pretizzle eu, black ac, eleifend vitae, shiznit. Fizzle suscipizzle. Doggy semper velit sizzle i'm in the shizzle.	
+				</p>
+				<h1>Column 1: Second header - level one (eli h1) as the above one</h1>
+				<p>
+					Pellentesque bizzle tortor. Crazy erizzle. Daahng dawg at dolor you son of a bizzle turpis tempus fo shizzle. Maurizzle pellentesque fo shizzle my nizzle crazy turpis. Vestibulum izzle yo. Izzle eleifend rhoncizzle fo shizzle. In i'm in the shizzle uhuh ... yih! platea dictumst. Crazy dapibizzle. Dang tellizzle urna, pretizzle eu, black ac, eleifend vitae, shiznit. Fizzle suscipizzle.
+				</p>
+				<p>
+					Pizzle pulvinar, ipsizzle malesuada malesuada go to hizzle, nulla purus sizzle nizzle, shiz luctizzle metizzle nulla izzle fizzle. Fo shizzle mah nizzle fo rizzle, mah home g-dizzle ullamcorper, tortor yo mamma varius dizzle, nibh nunc ma nizzle turpis, izzle luctus leo funky fresh fo shizzle mah nizzle fo rizzle, mah home g-dizzle crazy.
+				</p>
+			</div>
+		</div>
+		
+		<div class="content_holder">
+			<div class="text_container right">
+				<h1>Column 4</h1>
+				<p>
+					Da bomb mah nizzle dolor shizzlin dizzle amizzle, consectetuer adipiscing elizzle. Gizzle sapizzle velizzle, hizzle boom shackalack, suscipizzle quis, gangster vel, arcu. Pellentesque bizzle tortor. Crazy erizzle. Daahng dawg at dolor you son of a bizzle turpis tempus fo shizzle. Maurizzle pellentesque fo shizzle my nizzle crazy turpis. Vestibulum izzle yo. Izzle eleifend rhoncizzle fo shizzle. In i'm in the shizzle uhuh ... yih! platea dictumst. Crazy dapibizzle. Dang tellizzle urna, pretizzle eu, black ac, eleifend vitae, shiznit. Fizzle suscipizzle. Doggy semper velit sizzle i'm in the shizzle.
+				</p>
+				<p>
+					Etiam mofo urna hizzle nisl. Get down get down quizzle arcu. Pizzle pulvinar, ipsizzle malesuada malesuada go to hizzle, nulla purus sizzle nizzle, shiz luctizzle metizzle nulla izzle fizzle. Fo shizzle mah nizzle fo rizzle, mah home g-dizzle ullamcorper, tortor yo mamma varius dizzle, nibh nunc ma nizzle turpis, izzle luctus leo funky fresh fo shizzle mah nizzle fo rizzle, mah home g-dizzle crazy. Maurizzle pimpin', orci vel funky fresh.
+				</p>
+				<h1>Column 2: Second header - level one (eli h1) as the above one</h1>
+				<p>
+					Pizzle pulvinar, ipsizzle malesuada malesuada go to hizzle, nulla purus sizzle nizzle, shiz luctizzle metizzle nulla izzle fizzle. Fo shizzle mah nizzle fo rizzle, mah home g-dizzle ullamcorper, tortor yo mamma varius dizzle, nibh nunc ma nizzle turpis, izzle luctus leo funky fresh fo shizzle mah nizzle fo rizzle, mah home g-dizzle crazy.
+				</p>
+				<h2>Pohjalle h2-otsake näyttämään, että silläkään ei ole bottom-marginaalia</h2>
+			</div>
+		</div>
+		
+		<div class="blocker_stretcher"></div>
+		
+	</div>
+</body>
+
+</html>

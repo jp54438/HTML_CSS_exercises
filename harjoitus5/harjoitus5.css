@@ -1,0 +1,66 @@
+
+	h1{
+		font-family:"Roboto Slab", serif;
+		font-size: 2em;
+		color: #000;
+	}
+	h2,h3{
+		font-family:Lato, sans-serif;
+		font-size: 1.6em;
+		color: #000;
+	}
+
+	h3{
+/*		font-family:Lato, sans-serif;*/
+		font-size: 1.2em;
+		/*color: #000;*/
+	}
+	p{
+		font-family:"Roboto Slab", serif;
+		font-size: 1em;
+		color: #000;
+		text-align:left;
+	
+	}
+	
+	blockquote{
+		font-family:Inconsolata, sans-serif;
+		font-size: 1em;
+		font-style:italic;
+		font-size: 0.75em;
+		color: #c00;
+		text-align:justify;
+		line-height:2.5em;
+	}
+	
+	p.sisennys{
+		text-indent:1em;
+	}
+	span.variantti{
+		font-variant:normal;
+	}		
+	p.lihavointi{
+		font-weight:bold;
+	}
+	
+	span.isoilla{
+		font-variant:small-caps;
+	}
+	span.alleviivaus{
+		text-decoration:underline;
+	}
+	
+	span.yliviivaus{
+		text-decoration:line-through	;
+	}
+	
+	span.tuplatila{
+		letter-spacing:2px;
+	}
+	span.sanojen_tuplatila{
+		word-spacing:4px;
+	}
+	#eka_kirjain{
+		font-size:3em;
+	}
+	

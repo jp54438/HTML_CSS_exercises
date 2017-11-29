@@ -1,0 +1,53 @@
+	*{
+		box-sizing:border-box;
+	}
+	h1{
+		font-family:Muli, sans-serif;
+		font-size: 1.5em;
+		color: black;
+	}
+	h2{
+		font-family:Muli, sans-serif;
+		font-size: 1.2em;
+		color: black;
+	}
+	img{
+		max-width:100%;
+		height:auto;
+	}
+	figure{
+		margin:0;
+	}
+	
+	.wrapper{
+		max-width: 1220px;
+		margin: 0 auto;
+		padding-right:1.66666666%; /*paddingia, jotta vasemmalla 
+							oleva col marginaali tasapainottuu*/
+	}
+
+	.row{
+		clear:both;
+		overflow: hidden;
+		margin-bottom:15px;
+	}
+
+	.col{
+		float: left;
+		margin-left: 1.66666666%;
+		width: 98.33333323%;
+		background:lightgray;
+		margin-bottom: 20px;
+
+	}
+
+	
+/*	.col.span7{ width:42.08333329%}
+	/*.col.span12{ width:98.33333323%}*/
+
+@media screen and (min-width: 700px){
+	.col.lg-span8{ width:48.33333328%}
+}	
+@media screen and (min-width:900px){
+		.col.xl-span4{ width:23.33333333%}
+}

@@ -1,0 +1,35 @@
+	#wrapper{
+		width:960px;
+		margin-left:auto;
+		margin-right:auto;
+		background-color: #fff;
+	}
+	#banner{
+		height:80px;
+		background-color:#cc0;
+	}
+	#sidebar{
+		float: left;		
+		width:220px;
+		height:200px;
+		margin-top: 1em;
+		background-color:#fff;
+	}
+	
+	#pystyviiva{
+		float:left;
+		width:1px;
+		height:200px;
+		margin-top: 1em;
+		background-color:#cc0;
+	}
+	#main{
+		height:300px;
+		margin-left:220px;
+		margin-left:220px;
+		background-color:#fff;
+	}
+	#footer{
+		background-color:#cc0;
+		height:80px;
+	}

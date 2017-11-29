@@ -1,0 +1,90 @@
+	*{
+		box-sizing:border-box;
+	}
+	
+	#wrapper{
+		width:960px;
+		margin-left:auto;
+		margin-right:auto;
+		background-color: lightgrey;
+	}
+	#banner{
+		height:80px;
+		width:auto;
+
+		margin:0px;
+	}
+
+	#navigation{
+		width:auto;
+		height:60px;
+		background-color:blue;
+
+	}
+	.seitseman_kahdestoistaosaa{
+		position:relative;
+		width:560px;
+		height:120px;
+	}
+	.kolmasosa {
+		position:relative;
+		width:320px;
+		height:120px;
+		background-color:grey;
+	}
+	.neljasosa {
+		position:relative;
+		width:260px;
+		height:120px;
+	}
+	.kuudesosa{
+		position:relative;
+		width:160px;
+		height:120px;
+	}
+	.grid_rivi{
+		clear:both;
+		height:120px;
+		width:960px;
+	}
+	#vasen{
+		left:0px;
+	}
+	#kolmasosa_keskella{
+		left:320px;
+		top:-120px;
+		background-color:darkred;
+	}
+	#kolmasosa_oikea{
+		left:640px;
+		top:-240px;
+	}
+	#neljasosa_oikea{
+		left:720px;
+		top:-240px;
+	}
+	#puolikas_kahden_jalkeen{
+		left:160px;
+		top:-120px;
+		background-color:darkred;
+	}
+	#midrow{
+		clear:both;
+		width:auto;
+		height:60px;
+		background-color:#cc0;
+	}
+	#main1{
+		
+	}
+	
+	#main2{
+	
+	}
+	
+	#footer{
+		background-color:green;
+		width: auto;
+		height:60px;
+		clear:both;
+	}
